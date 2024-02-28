@@ -27,6 +27,7 @@
     <p style= "text-align:center;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;" id="score"><b>Score is zero</b></p>
     <p style= "text-align:center;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif"><button onclick="help()">Click for help</button></p>
     <p style= "text-align:center;font-family: cursive;" id="help"><b>Help report</b></p>
+    <p style= "text-align:center;font-family: cursive";><button class="btn btn-primary" onclick="newGame()">new game</button></p>
     <div class="container">
     <div class="row">
             <div class="col-sm-2"><img src="building.jpg" alt="building Image" id="img0" onclick="check(0)"></div>
@@ -157,6 +158,16 @@
 
 
       }
+      function newGame() {
+            monsterLocation = Math.floor(Math.random() * 35);
+            fancyCoinLocations = Math.floor(Math.random() * 35);
+            console.log(monsterLocation);
+            console.log(fancyCoinLocations);
+            score=null;
+            locations=null;
+            document.getElementById("locations").innerText =`locations: 0`;
+            document.getElementById("score").innerText = `score: 0`;
+        }
 </script>
 </body>
 </html>
